@@ -1,0 +1,19 @@
+{
+  "name": "it3040-assignment1",
+  "version": "1.0.0",
+  "description": "Playwright automation for IT3040 Assignment 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.0",
+    "csv-stringify": "^6.4.0"
+  }
+}

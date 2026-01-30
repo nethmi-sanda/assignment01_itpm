@@ -1,0 +1,2 @@
+# Singlish to Sinhala Text Converter
+# No external dependencies required - uses only Python standard library
