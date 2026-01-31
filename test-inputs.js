@@ -32,5 +32,13 @@ module.exports = [
   { id: "Neg_Fun_0031", input: "mama yanna hadhannee office ekata kiyalaa mama hithuvaa, mama enavadha maath ekka kiyalaa eyaa aehuvaa. haebaeyi, eyaa iiyee gedhara giyaa kiyalaa mama dhannavaa, apita heta office ekee meeting ekak thiyanavaa.eeka thiyenne heta havasata." },
   { id: "Neg_Fun_0032", input: "pls doc eka submit karanna. " },
   { id: "Neg_Fun_0033", input: "ee class ekee Lamayi fifty hitiyaa aluthin Lamayi 5k gannavaa kivvaa." },
+  { id: "Pos_Fun_0025", input: "mama heta gama yanavaa." },
+  { id: "Pos_Fun_0026", input: "oyaage nama mokakdha?" },
+  { id: "Pos_Fun_0027", input: "mata vathura tikak dhenna." },
+  { id: "Pos_Fun_0028", input: "api cricket gahamu." },
+  { id: "Pos_Fun_0029", input: "bus eka parakhkhuyi." },
+  { id: "Pos_Fun_0030", input: "eliye wahinava." },
+  { id: "Neg_Fun_0034", input: "TestNumber123AndSymbol$$$" },
+  { id: "Neg_Fun_0035", input: "Inv@lid Ch@rzu." },
   { id: "Pos_UI_0001", input: "mama", description: "UI Test: Check real-time update" }
 ];

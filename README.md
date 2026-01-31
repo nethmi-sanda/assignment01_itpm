@@ -27,7 +27,7 @@ npx playwright test
 
 ## Output
 - The test execution will generate a report file `test-results.csv` in the root directory.
-- This CSV file contains the 35 test scenarios (24 Positive, 10 Negative, 1 UI) with their status and actual outputs.
+- This CSV file contains the 42 test scenarios (31 Positive, 11 Negative) with their status and actual outputs.
 
 ## Project Structure
 - `tests/swift_test.spec.js`: Main automation script.

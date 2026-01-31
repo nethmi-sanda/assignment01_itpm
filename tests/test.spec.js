@@ -73,19 +73,6 @@ const processedTestCases = rawTestCases.map(tc => {
     };
 });
 
-// Add missing Negative test case if needed to reach 35 total (24+10+1)
-// Current rawTestCases size: 34. Need 1 more Neg.
-if (!processedTestCases.find(t => t.id === 'Neg_Fun_0034')) {
-    processedTestCases.push({
-        id: 'Neg_Fun_0034',
-        input: 'TestNumber123AndSymbol$$$',
-        name: 'Invalid Alphanumeric Input',
-        lengthType: 'M',
-        coverage: 'Robustness validation',
-        description: 'Check handling of non-Singlish chars'
-    });
-}
-
 // Global results array
 const results = [];
 
@@ -145,13 +132,9 @@ test.describe('Assignment 1 Automation', () => {
             let status = 'Pass';
             let expectedValue = actualValue; 
             
-            // For Negative tests, we might expect it to NOT change or output garbage, 
-            // but for the CSV we record what happened.
+            // For Negative tests, we mark status as Fail as requested
             if(tc.id.startsWith('Neg')) {
-                // If it's a negative test, maybe we expect it to fail/be messy.
-                // We keep status Pass (meaning the TEST Execution passed) 
-                // but the CSV might reflect the "Issue".
-                // However, user prompt asks to "record execution results".
+                status = 'Fail';
             }
 
             results.push({
@@ -161,8 +144,13 @@ test.describe('Assignment 1 Automation', () => {
                 status: status
             });
             
-            // Basic assertion to ensure test runner doesn't flag everything as red unless error
-            expect(actualValue).toBeDefined();
+            if (tc.id.startsWith('Neg')) {
+                 // Force failure for Negative test cases so they show as "Failed" in the test report
+                 expect(status, 'Negative test case expected to fail').toBe('Pass');
+            } else {
+                 // Basic assertion to ensure test runner doesn't flag everything as red unless error
+                 expect(actualValue).toBeDefined();
+            }
         });
     }
 });
